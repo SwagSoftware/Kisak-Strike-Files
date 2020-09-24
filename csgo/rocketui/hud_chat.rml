@@ -1,0 +1,105 @@
+<rml>
+	<head>
+		<style>
+			body
+			{
+				font-family: Lato;
+				width: 33%;
+				height: 20%;
+				position: absolute;
+				left: 1%;
+				top: 79%;
+				decorator: gradient( vertical #2B2C2C #131516 );
+
+				border: 1px #D89D74;
+				margin: auto;
+				opacity: 0.5;
+				overflow: scroll;
+			}
+			scrollbarvertical
+			{
+			    width: 1em;
+            }
+            .chat_username_server
+            {
+                color: #FFFFF0;
+            }
+			.chat_username_friend
+			{
+                color: #6B8E23;
+			}
+			.chat_username_foe
+			{
+			    /*font-effect: glow(1px #DD0000);*/
+			    color: #FF6633;
+			}
+			.chat_message
+			{
+			}
+			.chat_line
+			{
+			}
+			#chat_lines
+			{
+			    display: block;
+			    vertical-align: top;
+			    overflow: scroll;
+			}
+			#chat_input
+			{
+			    position: fixed;
+			    vertical-align: bottom;
+			    background-color: rgba(0, 0, 0, 255);
+			    overflow-x: scroll;
+			    max-width: 100%;
+			    height: 6%;
+			    top: 94%;
+			}
+		</style>
+	</head>
+	<body>
+	    <div id="chat_lines">
+	        <div class="chat_line">
+	            <div class="chat_username_foe">Kevin Gates: </div>
+	            <div class="chat_message">
+	                I got two phones, one for the plug and one for the load
+                    I got two phones, one for the bitches and one for the dough
+                    Think I need two more, line bumpin' I'm ring, ring, ringin'
+                    Countin' money while they ring, ring, ringin'
+                </div>
+            </div>
+            <br/>
+            <div class="chat_line">
+	            <div class="chat_username_server">Kevin Gates: </div>
+	            <div class="chat_message">
+	                I got two phones, one for the plug and one for the load
+                    I got two phones, one for the bitches and one for the dough
+                    Think I need two more, line bumpin' I'm ring, ring, ringin'
+                    Countin' money while they ring, ring, ringin'
+                </div>
+            </div>
+            <br/>
+            <div class="chat_line">
+	            <div class="chat_username_foe">Kevin Gates: </div>
+	            <div class="chat_message">
+	                I got two phones, one for the plug and one for the load
+                    I got two phones, one for the bitches and one for the dough
+                    Think I need two more, line bumpin' I'm ring, ring, ringin'
+                    Countin' money while they ring, ring, ringin'
+                </div>
+            </div>
+            <br/>
+            <div class="chat_line">
+	            <div class="chat_username_foe">Kevin Gates: </div>
+	            <div class="chat_message">
+	                I got two phones, one for the plug and one for the load
+                    I got two phones, one for the bitches and one for the dough
+                    Think I need two more, line bumpin' I'm ring, ring, ringin'
+                    Countin' money while they ring, ring, ringin'
+                </div>
+            </div>
+	    </div>
+        <br/>
+        <input id="chat_input" type="text" size="128" name="chat_input"/>
+	</body>
+</rml>

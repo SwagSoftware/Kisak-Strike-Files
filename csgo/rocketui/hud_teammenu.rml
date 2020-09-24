@@ -1,0 +1,47 @@
+<rml>
+    <head>
+        <style>
+            body
+            {
+                font-family: Lato;
+                left: 30%;
+                top: 35%;
+                width: 40%;
+                height: 30%;
+                background-color: #222222;
+                opacity: 0.5;
+            }
+            #team_buttons
+            {
+                top: 50%;
+                text-align: center;
+                position: absolute;
+            }
+            button
+            {
+                opacity: 1.0;
+                border-width: 1px;
+                border-color: #222;
+                background: #666;
+                margin-left: 6dp;
+                display: inline-block;
+                width: 130dp;
+                line-height: 24dp;
+                text-align: center;
+            }
+            button:hover
+            {
+                background: #999;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="team_buttons">
+            <button id="team_ct">Counter-Terrorist</button>
+            <br/>
+            <button id="team_t">Terrorist</button>
+            <br/>
+            <button id="team_spec">Spectator</button>
+        </div>
+    </body>
+</rml>

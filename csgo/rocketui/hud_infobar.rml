@@ -1,0 +1,90 @@
+<rml>
+	<head>
+		<style>
+			body {
+				font-family: Lato;
+				width: 65%;
+				height: 20%;
+				position: absolute;
+				left: 34%;
+				top: 79%;
+
+				margin: auto;
+				opacity: 0.5;
+			}
+			#container {
+				position: relative;
+				height: 100%;
+				width: 100%;
+			}
+			.bottom-content {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+			}
+			h1 {
+				font-size: 30px;
+			}
+			h2 {
+				font-size: 14px;
+			}
+			h3 {
+				font-size: 12px;
+			}
+			h4 {
+				font-size: 18px;
+			}
+			.row {
+				display: block;
+			}
+			.col {
+				display: inline-block;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div class="bottom-content" data-model="infobar_model">
+				<div class="row">
+					<div class="col" style="width: 10%;">
+						<h2>HP</h2>
+						<h1 id="HP">{{hp}}</h1>
+					</div>
+					<div class="col" style="width: 10%;">
+						<h2>SUIT</h2>
+						<h1 id="AP">{{armor}}</h1>
+						<h1 id="HELM" data-if="has_helmet">+</h1>
+					</div>
+					<div class="col" style="width: 10%;"/>
+					<div class="col" style="width: 10%;"/>
+					<div class="col" style="width: 10%;"/>
+					<div class="col" style="width: 15%;">
+						<h2>AMMO</h2>
+						<h1 id="current_ammo">{{ammo}}</h1>
+						<h1>/</h1>
+						<h1 id="reserve_ammo">{{ammo_reserve}}</h1>
+						<h3 id="fire_mode"> {{fire_mode_string}}</h3>
+					</div>
+					<div class="col" style="width: 5%;"/>
+					<div class="col" style="width: 12%;"/>
+					<div class="col" style="width: 18%;">
+						<h4>{{primary_string}}</h4>
+						<br/>
+						<h4>{{secondary_string}}</h4>
+						<br/>
+						<h4>{{knife_string}}</h4>
+						<br/>
+						<h4 data-if="has_grenade">Grenade </h4>
+						<h4 data-if="has_flash">Flash </h4>
+						<h4 data-if="has_flash_pair">Flash(x2) </h4>
+						<h4 data-if="has_smoke">Smoke </h4>
+						<h4 data-if="has_fire">Fire </h4>
+						<br/>
+						<h4 data-if="has_c4">C4 Bomb</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</rml>

@@ -1,0 +1,19 @@
+<rml>
+	<head>
+		<title>Demo</title>
+		<style>
+			body
+			{
+				font-family: Lato;
+				width: 900px;
+				height: 600px;
+				background-color: green;
+				margin: auto;
+				opacity: 0.55;
+			}
+		</style>
+	</head>
+	<body>
+		Normie get out now!
+	</body>
+</rml>

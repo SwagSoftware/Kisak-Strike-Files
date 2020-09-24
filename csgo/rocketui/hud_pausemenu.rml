@@ -1,0 +1,49 @@
+<rml>
+    <head>
+        <style>
+            body
+            {
+                font-family: Lato;
+                width: 100%;
+                height: 100%;
+                background-color: #222222;
+                opacity: 0.5;
+            }
+            #menu_buttons
+            {
+                top: 50%;
+                text-align: center;
+                position: absolute;
+            }
+            button
+            {
+                opacity: 1.0;
+                border-width: 1px;
+                border-color: #222;
+                background: #666;
+                margin-left: 6dp;
+                display: inline-block;
+                width: 130dp;
+                line-height: 24dp;
+                text-align: center;
+            }
+            button:hover
+            {
+                background: #999;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="menu_buttons">
+            <button id="pm_resume">Resume</button>
+            <br/>
+            <button id="pm_choose">Choose Team</button>
+            <br/>
+            <button id="pm_callvote">Call Vote</button>
+            <br/>
+            <button id="pm_options">Options</button>
+            <br/>
+            <button id="pm_disconnect">Disconnect</button>
+        </div>
+    </body>
+</rml>

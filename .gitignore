@@ -1,0 +1,17 @@
+/bin/
+/csgo/
+/platform/
+chrome.pak
+csgo.sh
+csgo_linux64
+*.map
+*.trace
+*.so
+*.so.*
+steam_appid.txt
+thirdpartylegalnotices.doc
+vgcore.*
+.idea/*
+
+#Dont ignore rocketui folder
+!/csgo/rocketui

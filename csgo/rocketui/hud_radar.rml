@@ -1,0 +1,59 @@
+<rml>
+	<head>
+		<style>
+			body
+			{
+				font-family: Lato;
+				width: 400px;
+				height: 400px;
+				position: absolute;
+				left: 1%;
+				top: 1%;
+
+				border: 1px #D89D74;
+				margin: auto;
+				opacity: 0.5;
+				overflow: scroll;
+				decorator: gradient( vertical #0B0C0C #000000 );
+			}
+			.player
+			{
+				width: 5px;
+				height: 5px;
+				position: absolute;
+				background-color: white;
+				display: block;
+			}
+			#testplayer
+			{
+				top: 50%;
+				left: 50%;
+				opacity: 1;
+			}
+			#hairX
+			{
+				opacity: 1;
+				top: 50%;
+				width: 100%;
+				height: 1px;
+				background-color: #D89D74;
+				position: absolute;
+			}
+			#hairY
+			{
+				position: absolute;
+				left: 50%;
+				height: 100%;
+				width: 1px;
+				background-color: #D89D74;
+			}
+		</style>
+	</head>
+	<body id="body">
+		<div id="container">
+			<div id="hairX"/>
+			<div id="hairY"/>
+			<!-- Dynamically created elements go here -->
+		</div>
+	</body>
+</rml>

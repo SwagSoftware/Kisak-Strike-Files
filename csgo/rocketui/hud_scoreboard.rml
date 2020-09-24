@@ -1,0 +1,128 @@
+<rml>
+	<head>
+		<style>
+			body
+			{
+				font-family: Lato;
+				border: 1px #D89D74;
+				top: 35%;
+				left: 30%;
+				width: 40%;
+				height: 30%;
+				text-align: center;
+				position: absolute;
+				decorator: gradient( vertical #2B2C2C #030506 );
+			}
+			.playerrow {
+				display: block;
+			}
+			.namecol {
+				display: inline-block;
+				width: 20%;
+			}
+			.cashcol {
+				display: inline-block;
+				width: 10%;
+			}
+			.killscol {
+				display: inline-block;
+				width: 5%;
+			}
+			.deathscol {
+				display: inline-block;
+				width: 5%;
+			}
+			.assistscol {
+				display: inline-block;
+				width: 5%;
+			}
+			.spacercol {
+				display: inline-block;
+				width: 5%;
+			}
+			.pingcol {
+				display: inline-block;
+				width: 5%;
+			}
+			#legend {
+				display: block;
+				decorator: gradient( vertical #2B2C2C #131516 );
+				font-size: 16px;
+				height: 7%;
+				width: 100%;
+			}
+			.ctplayer {
+				display: block;
+				decorator: gradient( vertical #6699CC #050506 );
+			}
+			.tplayer {
+				display: block;
+				decorator: gradient( vertical #EFB912 #050506 );
+			}
+			#ct {
+				display: block;
+				max-height: 52%;
+			}
+			#t {
+				position: absolute;
+				display: block;
+				top: 45%;
+				max-height: 45%;
+			}
+			#spec {
+				position: absolute;
+				text-align: left;
+				top: 95%;
+				max-height: 10%;
+				border-top: 1px #D89D74;
+			}
+			#scores {
+				position: absolute;
+				text-align: left;
+				top: 0%;
+				left: 0%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="legend" data-model="scoreboard_model">
+			<div id="scores"> CT: {{ct_score}} - T: {{t_score}} </div>
+			<div class="namecol"> </div>
+			<div class="cashcol"> </div>
+			<div class="killscol"> K </div>
+			<div class="deathscol"> D </div>
+			<div class="assistscol"> A </div>
+			<div class="spacercol"> </div>
+			<div class="pingcol"> Ping </div>
+		</div>
+		<div id="ct" data-model="scoreboard_model">
+			<div data-for="goodplayer : ctplayers">
+				<div class="ctplayer" >
+					<div class="namecol"> {{goodplayer.name}} </div>
+					<div class="cashcol"> ${{goodplayer.cash}} </div>
+					<div class="killscol"> {{goodplayer.kills}} </div>
+					<div class="deathscol"> {{goodplayer.deaths}} </div>
+					<div class="assistscol"> {{goodplayer.assists}} </div>
+					<div class="spacercol"> </div>
+					<div class="pingcol"> {{goodplayer.ping}} </div>
+				</div>
+			</div>
+		</div>
+		<div id="t" data-model="scoreboard_model">
+			<div data-for="badplayer : tplayers">
+				<div class="tplayer">
+					<div class="namecol"> {{badplayer.name}} </div>
+					<div class="cashcol"> ${{badplayer.cash}} </div>
+					<div class="killscol"> {{badplayer.kills}} </div>
+					<div class="deathscol"> {{badplayer.deaths}} </div>
+					<div class="assistscol"> {{badplayer.assists}} </div>
+					<div class="spacercol"> </div>
+					<div class="pingcol"> {{badplayer.ping}} </div>
+				</div>
+			</div>
+		</div>
+		<div id="spec" data-model="scoreboard_model">
+			Spectators: {{num_specs}}
+		</div>
+	</body>
+</rml>
