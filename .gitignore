@@ -12,6 +12,7 @@ steam_appid.txt
 thirdpartylegalnotices.doc
 vgcore.*
 .idea/*
-
+csgo_linux
+srcds_linux
 #Dont ignore rocketui folder
 !/csgo/rocketui

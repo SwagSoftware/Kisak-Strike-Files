@@ -121,252 +121,72 @@
         {
         	cursor: pointer;
         }
-
-
-        /***  Decorators  ***/
-        #decorators {
-        	text-align: left;
+        @keyframes cube-look-around {
+            0% { transform: rotateX(0deg) rotateY(0deg); }
+            20%	 { transform: rotate3d(1, -1, 0.3, 27deg); }
+            40%	 { transform: rotate3d(-1, 1, 0.3, 32deg); }
+            60%	 { transform: rotate3d(-1, -1, 0.3, 30deg); }
+            80%	 { transform: rotate3d(1, 1, 0.3, 35deg); }
+            100% { transform: rotateX(0deg) rotateY(0deg); }
         }
-        #decorators p
-        {
-        	margin: 0.5em 0;
-        }
-        #decorators button.gradient
-        {
-        	decorator: gradient( vertical #415857 #5990A3 );
-        	border: 2px #415857;
-        	margin-right: 12px;
-        }
-        #decorators button.gradient.horizontal
-        {
-        	decorator: gradient( horizontal #DB6565 #F1B58A );
-        	border: 2px #DB6565;
-        }
-        #decorators button.gradient:hover
-        {
-        	border-color: #F9EFA3;
+        @keyframes cube-frontal-spin {
+            from { transform: rotate3d(0, 0, 0, 0deg); }
+            to   { transform: rotate3d(0.05, 0.05, 1, 180deg); }
         }
 
-        #decorators .image-alien
-        {
-        	width: 64px;
-        	height: 64px;
+        .cube_container {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            perspective: 500px;
         }
-        #decorators .image-invader
-        {
-        	width: 51px;
-        	height: 39px;
-        	decorator: image( icon-invader );
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            /*animation: 5s cube-down-right 1 alternate back-in-out, 5s cube-frontal-spin 1 alternate back-in-out;*/
+            animation: 15s 1s cube-look-around infinite cubic-in-out;
         }
-        .side-by-side
-        {
-        	display: inline-block;
-        	width: 120px;
-        	vertical-align: middle;
-        	text-align: center;
+        .face {
+            left: 50px; top: 50px;
+            display: block;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            font-size: 60px;
+            text-align: center;
+            opacity: 0.5;
         }
-        .tiled-box
-        {
-        	height: 200px;
-        	decorator: tiled-box(
-        		window-tl, window-t, window-tr,
-        		window-l, window-c, window-r,
-        		window-bl, window-b, window-br
-        	);
+        /* Define each face based on direction */
+        .face.front {
+            transform: translateZ(50px);
+            decorator: image( /images/kisak.tga );
+            opacity: 0.7;
         }
-        .image-mode
-        {
-        	text-align: center;
-        	margin-top: 30px;
+        .face.front:hover {
+            background: rgba(255, 255, 0, 120);
         }
-        .image-mode > div
-        {
-        	display: inline-block;
-        	width: 120px;
-        	height: 50px;
-        	padding: 5px 10px;
-        	margin: 10px 10px;
-        	background-color: #c662;
-        	border: 1px #777;
-        	font-effect: shadow( 1px 1px #333 );
+        .face.back {
+            color: black;
+            background: black;
+            transform: rotateY(180deg) translateZ(100px);
         }
-        #decorators .image-mode > div > p
-        {
-        	margin: -2em 0 0 0;
-        	text-align: center;
+        .face.right {
+            decorator: image( /images/kisak.tga );
+            transform: rotateY(90deg) translateZ(50px);
         }
-        .image-mode.small { margin-top: -20px; }
-        .image-mode.small > div
-        {
-        	width: 40px;
-        	height: 20px;
-        	padding: 0;
-        	margin-left: 60px;
-        	margin-right: 60px;
+        .face.left {
+            decorator: image( /images/kisak.tga );
+            transform: rotateY(-90deg) translateZ(50px);
         }
-        .align-default     { decorator: image( icon-invader scale-none             ); }
-        .align-right       { decorator: image( icon-invader scale-none right       ); }
-        .align-left-bottom { decorator: image( icon-invader scale-none left bottom ); }
-        .align-percent     { decorator: image( icon-invader scale-none 70% 30%     ); }
-        .align-pixel       { decorator: image( icon-invader scale-none 100px -15px ); }
-        .fit-fill       { decorator: image( icon-invader fill       ); }
-        .fit-contain    { decorator: image( icon-invader contain    ); }
-        .fit-cover      { decorator: image( icon-invader cover      ); }
-        .fit-scale-none { decorator: image( icon-invader scale-none ); }
-        .fit-scale-down { decorator: image( icon-invader scale-down ); }
-        .orientation-vertical   { decorator: image( icon-invader flip-vertical   scale-none ); }
-        .orientation-horizontal { decorator: image( icon-invader flip-horizontal scale-none ); }
-        .orientation-rotate     { decorator: image( icon-invader rotate-180      scale-none ); }
-
-
-        /***  Font effects  ***/
-
-        #font_effects div
-        {
-        	display: inline-block;
-        	width: 150px;
-        	margin: 0px 30px 30px;
-        	text-align: center;
-        	font-size: 35px;
-        	color: #b33;
+        .face.top {
+            decorator: image( /images/kisak.tga );
+            transform: rotateX(90deg) translateZ(50px);
         }
-        #font_effects h1
-        {
-        	margin: 15px 0 10px 0;
-        }
-        #font_effects .glow
-        {
-        	font-effect: glow(3px #ed5);
-        }
-        #font_effects .glow_sharper
-        {
-        	font-effect: glow(3px 1px #ed5);
-        }
-        #font_effects .glow_blurry
-        {
-        	font-effect: glow(2px 7px #ed5);
-        }
-        #font_effects .glow_shadow
-        {
-        	color: #ed5;
-        	font-effect: glow(2px 4px 2px 3px #644);
-        }
-        #font_effects .outline_small
-        {
-        	font-effect: outline(2px #ed5);
-        }
-        #font_effects .outline_big
-        {
-        	font-effect: outline(4px #ed5);
-        }
-        #font_effects .blur_small
-        {
-        	color: transparent;
-        	font-effect: blur(3px #ed5);
-        }
-        #font_effects .blur_big
-        {
-        	color: transparent;
-        	font-effect: blur(10px #ed5);
-        }
-        #font_effects .shadow_up
-        {
-        	font-weight: bold;
-        	font-effect: shadow(3px -3px #ed5);
-        }
-        #font_effects .shadow_down
-        {
-        	font-weight: bold;
-        	font-effect: shadow(0px 2px #333);
-        }
-        /***  Forms  ***/
-
-        form
-        {
-        	display: block;
-        	text-align: left;
-        }
-        form input, form select { margin-left: 0; }
-        form h2
-        {
-        	display: block;
-        	font-size: 16px;
-        	font-weight: bold;
-        	margin-top: 8px;
-        }
-        #rating {
-        	display: inline-block;
-        	width: 40px;
-        	padding-left: 1em;
-        }
-        #rating_emoji {
-        	color: #ffd40f;
-        	font-size: 1.7em;
-        }
-        progressbar {
-        	margin: 10px 20px;
-        	display: inline-block;
-        	vertical-align: middle;
-        }
-        #gauge {
-        	decorator: image( gauge );
-        	width: 100px;
-        	height: 86px;
-        }
-        #gauge fill {
-        	fill-image: gauge-fill;
-        }
-        #progress_horizontal {
-        	decorator: tiled-horizontal( progress-l, progress-c, progress-r );
-        	width: 150px;
-        	height: 34px;
-        }
-        #progress_horizontal fill {
-        	decorator: tiled-horizontal( progress-fill-l, progress-fill-c, progress-fill-r );
-        	margin: 0 7px;
-        	padding-left: 14px;
-        }
-        #progress_label {
-        	font-size: 18px;
-        	color: #ceb;
-        	margin-left: 1em;
-        	margin-bottom: 0;
-        }
-        #gauge_value, #progress_value {
-        	font-size: 18px;
-        	color: #4ADB2D;
-        	text-align: right;
-        	width: 50px;
-        	font-effect: outline( 2px #555 );
-        }
-        #gauge_value {
-        	margin: 30px 0 0 18px;
-        }
-        #progress_value {
-        	margin-left: -20px;
-        	display: inline-block;
-        	vertical-align: -3px;
-        }
-
-
-        #form_output
-        {
-        	border: 1px #666;
-        	font-size: 0.9em;
-        	background-color: #ddd;
-        	min-height: 180px;
-        	margin-top: 10px;
-        	padding: 5px 8px;
-        	color: #222;
-        	white-space: pre-wrap;
-        	overflow: hidden auto;
-        }
-
-        #controls textarea
-        {
-        	font-size: 18px;
-        	font-effect: outline(2px #006600);
-        	color: #ddd;
+        .face.bottom {
+            decorator: image( /images/kisak.tga );
+            transform: rotateX(-90deg) translateZ(50px);
         }
 		</style>
 	</head>
@@ -375,87 +195,25 @@
     <tabset id="menu">
     <tab>Welcome</tab>
     <panel id="welcome">
-    	<p class="title" style="margin-top: 1.8em;">RmlUi</p>
+    	<p class="title" style="margin-top: 1.8em;">Kisak-Strike</p>
     	<p>This is the placeholder menu for kisak-strike UI v0.1</p>
+    	<p>Powered by RmlUI</p>
 		<p>use the console for starting a game</p>
+		<br/>
+		Official Github: <KisakURL url="https://github.com/SwagSoftware/Kisak-Strike" text="Link"/>
+		<br/>
+        <div class="cube_container">
+            <div class="cube">
+                <div class="face back"/>
+                <div class="face top"/>
+                <div class="face left"/>
+                <div class="face bottom"/>
+                <div class="face right"/>
+                <div class="face front"/>
+            </div>
+        </div>
     </panel>
-    <tab>Font effects</tab>
-    <panel id="font_effects">
-    	<h1>None</h1>
-    	<div class="original">RmlUi</div>
-    	<h1>Glow</h1>
-    	<div class="glow">RmlUi</div>
-    	<div class="glow_sharper">RmlUi </div>
-    	<div class="glow_blurry">RmlUi </div>
-    	<div class="glow_shadow">RmlUi </div>
-    	<h1>Outline</h1>
-    	<div class="outline_small">RmlUi </div>
-    	<div class="outline_big">RmlUi </div>
-    	<h1>Shadow</h1>
-    	<div class="shadow_up">RmlUi </div>
-    	<div class="shadow_down">RmlUi </div>
-    	<h1>Blur</h1>
-    	<div class="blur_small">RmlUi </div>
-    	<div class="blur_big">RmlUi </div>
-    </panel>
-    <tab>Forms</tab>
-    <panel id="controls">
-    	<form onsubmit="submit_form">
-    		<h2>Full name</h2>
-    		<div>
-    			<input type="text" size="20" name="name"/>
-    		</div>
-    		<h2>Email and password</h2>
-    		<div>
-    			<input type="text" size="10" name="email"/>
-    			<input type="password" size="10" name="password"/>
-    		</div>
-    		<h2>Favorite animal</h2>
-    		<div>
-    			<input type="radio" name="animal" value="dog" checked/> Dog
-    			<input type="radio" name="animal" value="cat"/> Cat
-    			<input type="radio" name="animal" value="narwhal"/> Narwhal
-    			<input type="radio" name="animal" value="no"/> I don't like animals
-    		</div>
-    		<h2>Favorite meals</h2>
-    		<div>
-    			<input type="checkbox" name="meals" value="pizza" checked/> Pizza
-    			<input type="checkbox" name="meals" value="pasta" checked/> Pasta
-    			<input type="checkbox" name="meals" value="lasagne" checked/> Lasagne
-    		</div>
-    		<h2>Rating</h2>
-    		<div>
-    			<input type="range" name="rating" min="0" max="100" step="1" value="50" onchange="rating"/> <span id="rating"/><span id="rating_emoji">&nbsp;</span>
-    		</div>
-    		<h2>Subject</h2>
-    		<div>
-    			<select name="subject">
-    				<option value="none" selected>Choose your subject</option>
-    				<option value="feature">Feature request</option>
-    				<option value="bug">Bug report</option>
-    				<option value="praise">Praise</option>
-    				<option value="criticism">Criticism</option>
-    			</select>
-    		</div>
-    		<h2>Message</h2>
-    		<div>
-    			<textarea cols="30" rows="100" wrap="nowrap" name="message"> Hello World!</textarea>
-    		</div>
-    		<div style="margin-bottom: 15px;">
-    			<input type="submit">Submit</input>
-    		</div>
-    		<div id="submit_progress" style="display: none;">
-    			<p id="progress_label">&nbsp;</p>
-    			<progressbar id="gauge" direction="clockwise" start-edge="bottom" value="0.0">
-    				<div id="gauge_value">50%</div>
-    			</progressbar>
-    			<progressbar id="progress_horizontal" direction="right" value="0.0"/>
-    			<div id="progress_value">50%</div>
-    			<h2>Form output</h2>
-    			<div id="form_output"></div>
-    		</div>
-    	</form>
-    </panel>
+    <tab id="options-menu-btn">Options</tab>
     </tabset>
     </body>
 </rml>

@@ -1,0 +1,162 @@
+<rml>
+    <head>
+        <style>
+            body
+            {
+                font-family: Lato;
+                left: 12.5%;
+                top: 20%;
+                width: 75%;
+                height: 60%;
+                background-color: #222222;
+                opacity: 0.7;
+            }
+            selectvalue
+            {
+                font-family: Lato;
+            }
+            KisakConvarSettingEnum
+            {
+                width: 20%;
+                height: 5%;
+            }
+            select
+            {
+                background-color: #666666;
+            }
+            option
+            {
+                background-color: #666666;
+            }
+            option:hover
+            {
+                background-color: #999;
+            }
+            KisakConvarSettingEnum
+            {
+                width: 20%;
+                height: 5%;
+            }
+            slidertrack
+            {
+                background-color: #000;
+            }
+            sliderbar
+            {
+                width: 10%;
+                height: 100%;
+                background-color: #999;
+            }
+            button
+            {
+                opacity: 1.0;
+                border-width: 1px;
+                border-color: #222;
+                background: #666;
+                margin-left: 6dp;
+                display: inline-block;
+                width: 130dp;
+                line-height: 24dp;
+                text-align: center;
+            }
+            button:hover
+            {
+                background: #999;
+            }
+        </style>
+    </head>
+    <body>
+        <KisakConvarSettingEnum
+        convar="csm_quality_level"
+        desc="Cascading Shadow Maps Quality" enum-values-count="4"
+        enum-value-0="0" enum-name-0="VERY LOW"
+        enum-value-1="1" enum-name-1="LOW"
+        enum-value-2="2" enum-name-2="MEDIUM"
+        enum-value-3="3" enum-name-3="HIGH"
+        />
+        <br/>
+        <KisakConvarSettingEnum
+        convar="gpu_mem_level"
+        desc="GPU Memory Level" enum-values-count="3"
+        enum-value-0="0" enum-name-0="LOW"
+        enum-value-1="1" enum-name-1="MEDIUM"
+        enum-value-2="2" enum-name-2="HIGH"
+        />
+        <br/>
+        <KisakConvarSettingEnum
+        convar="cpu_level"
+        desc="CPU Level(Effect Detail)" enum-values-count="3"
+        enum-value-0="0" enum-name-0="LOW"
+        enum-value-1="1" enum-name-1="MEDIUM"
+        enum-value-2="2" enum-name-2="HIGH"
+        />
+        <br/>
+        <KisakConvarSettingEnum
+        convar="gpu_level"
+        desc="GPU Level(Shader Detail)" enum-values-count="4"
+        enum-value-0="0" enum-name-0="LOW"
+        enum-value-1="1" enum-name-1="MEDIUM"
+        enum-value-2="2" enum-name-2="HIGH"
+        enum-value-3="3" enum-name-3="VERY HIGH"
+        />
+        <br/>
+        <KisakConvarSettingEnum
+        convar="mat_queue_mode"
+        desc="Queued Material Mode(Multi-Core)" enum-values-count="2"
+        enum-value-0="-1" enum-name-0="ENABLED"
+        enum-value-1="0"  enum-name-1="DISABLED"
+        />
+        <br/>
+        <KisakConvarSettingEnum
+        convar="mat_picmip"
+        desc="Skip Mip Levels" enum-values-count="5"
+        enum-value-0="0" enum-name-0="0(No skips)"
+        enum-value-1="1" enum-name-1="1"
+        enum-value-2="2" enum-name-2="2"
+        enum-value-3="3" enum-name-3="3"
+        enum-value-4="4" enum-name-4="4"
+        />
+        <br/>
+        <KisakConvarSettingEnum
+        convar="mat_forceaniso"
+        desc="Texture Filtering" enum-values-count="6"
+        enum-value-0="0" enum-name-0="Bi-Linear"
+        enum-value-1="1" enum-name-1="Tri-Linear"
+        enum-value-2="2" enum-name-2="Anisotropic 2x"
+        enum-value-3="4" enum-name-3="Anisotropic 4x"
+        enum-value-4="8" enum-name-4="Anisotropic 8x"
+        enum-value-5="16" enum-name-5="Anisotropic 16x"
+        />
+        <br/>
+        <KisakConvarSettingEnum
+        convar="mat_antialias"
+        desc="AntiAliasing" enum-values-count="3"
+        enum-value-0="0" enum-name-0="DISABLED"
+        enum-value-1="4" enum-name-1="MSAA 4x"
+        enum-value-2="8"  enum-name-2="MSAA 8x"
+        />
+        <br/>
+        <KisakConvarSettingSlider
+        convar="mat_monitorgamma"
+        desc="Monitor Gamma"
+        slider-min="1.6" slider-max="2.2" slider-step="0.05"
+        />
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        Changes are set on selection.
+        Press the Save button to save permanently to your config.
+        <br/>
+        <button id="save">Save</button>
+        <button id="close">Close</button>
+    </body>
+</rml>

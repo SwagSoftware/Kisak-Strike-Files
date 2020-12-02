@@ -9,6 +9,7 @@
 				position: absolute;
 				left: 1%;
 				top: 1%;
+				pointer-events: none;
 
 				border: 1px #D89D74;
 				margin: auto;
