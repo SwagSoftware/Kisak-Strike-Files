@@ -1,5 +1,5 @@
+!./
 /bin/
-/csgo/
 /platform/
 chrome.pak
 csgo.sh
@@ -14,5 +14,9 @@ vgcore.*
 .idea/*
 csgo_linux
 srcds_linux
+
+
+/csgo/*
 #Dont ignore rocketui folder
 !/csgo/rocketui
+!/csgo/rocketui/*
