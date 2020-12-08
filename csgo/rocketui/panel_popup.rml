@@ -1,0 +1,23 @@
+<rml>
+    <head>
+        <style>
+            body
+            {
+                font-family: Lato;
+                left: 35%;
+                top: 25%;
+                width: 30%;
+                height: auto;
+                background-color: #222222;
+                opacity: 0.7;
+                text-align: center;
+                font-size: 2.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="text">
+
+        </div>
+    </body>
+</rml>
