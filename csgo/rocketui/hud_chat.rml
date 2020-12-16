@@ -59,45 +59,7 @@
 	</head>
 	<body>
 	    <div id="chat_lines">
-	        <div class="chat_line">
-	            <div class="chat_username_foe">Kevin Gates: </div>
-	            <div class="chat_message">
-	                I got two phones, one for the plug and one for the load
-                    I got two phones, one for the bitches and one for the dough
-                    Think I need two more, line bumpin' I'm ring, ring, ringin'
-                    Countin' money while they ring, ring, ringin'
-                </div>
-            </div>
-            <br/>
-            <div class="chat_line">
-	            <div class="chat_username_server">Kevin Gates: </div>
-	            <div class="chat_message">
-	                I got two phones, one for the plug and one for the load
-                    I got two phones, one for the bitches and one for the dough
-                    Think I need two more, line bumpin' I'm ring, ring, ringin'
-                    Countin' money while they ring, ring, ringin'
-                </div>
-            </div>
-            <br/>
-            <div class="chat_line">
-	            <div class="chat_username_foe">Kevin Gates: </div>
-	            <div class="chat_message">
-	                I got two phones, one for the plug and one for the load
-                    I got two phones, one for the bitches and one for the dough
-                    Think I need two more, line bumpin' I'm ring, ring, ringin'
-                    Countin' money while they ring, ring, ringin'
-                </div>
-            </div>
-            <br/>
-            <div class="chat_line">
-	            <div class="chat_username_foe">Kevin Gates: </div>
-	            <div class="chat_message">
-	                I got two phones, one for the plug and one for the load
-                    I got two phones, one for the bitches and one for the dough
-                    Think I need two more, line bumpin' I'm ring, ring, ringin'
-                    Countin' money while they ring, ring, ringin'
-                </div>
-            </div>
+
 	    </div>
         <br/>
         <input id="chat_input" type="text" size="128" name="chat_input"/>
