@@ -1,6 +1,6 @@
 <rml>
 	<head>
-		<title>Demo</title>
+		<title>Kisak-Strike</title>
 		<link type="text/template" href="templates/window.rml"/>
 		<style>
 		@spritesheet demo-sheet
@@ -38,9 +38,9 @@
         body.window
         {
             font-family: Lato;
-        	width: 1300px;
-        	height: 750px;
-        	min-width: 1090px;
+        	width: 100%;
+        	height: 70%;
+        	min-width: 720px;
         	min-height: 300px;
         	max-width: -1px;
         	max-height: -1px;
@@ -52,7 +52,7 @@
         div#content
         {
         	position: relative;
-        	/* background-color: #bbb; */
+        	background-color: grey;
         }
         tabset
         {
@@ -110,7 +110,7 @@
         }
         p.title
         {
-        	font-size: 35px;
+        	font-size: 45px;
         	color: #b33;
         	font-effect: glow(2px #ed5);
         }
@@ -145,7 +145,7 @@
             height: 100%;
             position: relative;
             /*animation: 5s cube-down-right 1 alternate back-in-out, 5s cube-frontal-spin 1 alternate back-in-out;*/
-            animation: 15s 1s cube-look-around infinite cubic-in-out;
+            animation: 20s 1s cube-look-around infinite cubic-in-out;
         }
         .face {
             left: 50px; top: 50px;
@@ -191,17 +191,15 @@
 		</style>
 	</head>
 	<body template="window">
-
     <tabset id="menu">
     <tab>Welcome</tab>
     <panel id="welcome">
     	<p class="title" style="margin-top: 1.8em;">Kisak-Strike</p>
-    	<p>This is the placeholder menu for kisak-strike UI v0.1</p>
-    	<p>Powered by RmlUI</p>
-		<p>use the console for starting a game</p>
-		<br/>
-		Official Github: <KisakURL url="https://github.com/SwagSoftware/Kisak-Strike" text="Link"/>
-		<br/>
+    	<p>This is the placeholder menu for Kisak-Strike UI v0.1</p>
+    	<p>Powered by <KisakURL url="https://github.com/mikke89/RmlUi" text="RmlUi"/></p>
+		<p>Use the console for starting a game [for example: map de_dust2]</p>
+        <p>Official Github: <KisakURL url="https://github.com/SwagSoftware/Kisak-Strike" text="Link"/></p>
+
         <div class="cube_container">
             <div class="cube">
                 <div class="face back"/>

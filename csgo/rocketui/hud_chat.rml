@@ -4,7 +4,7 @@
 			body
 			{
 				font-family: Lato;
-				width: 33%;
+				width: 28%;
 				height: 20%;
 				position: absolute;
 				left: 1%;

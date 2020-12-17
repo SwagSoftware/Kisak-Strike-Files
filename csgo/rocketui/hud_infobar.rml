@@ -6,7 +6,7 @@
 				width: 65%;
 				height: 20%;
 				position: absolute;
-				left: 34%;
+				left: 38%;
 				top: 79%;
 
 				margin: auto;
@@ -52,7 +52,7 @@
 						<h1 id="HP">{{hp}}</h1>
 					</div>
 					<div class="col" style="width: 10%;">
-						<h2>SUIT</h2>
+						<h2>ARMOR</h2>
 						<h1 id="AP">{{armor}}</h1>
 						<h1 id="HELM" data-if="has_helmet">+</h1>
 					</div>

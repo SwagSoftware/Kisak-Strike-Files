@@ -9,7 +9,7 @@
                 width: 75%;
                 height: 60%;
                 background-color: #222222;
-                opacity: 0.7;
+                opacity: 0.9;
             }
             selectvalue
             {
@@ -153,9 +153,12 @@
         <br/>
         <br/>
         <br/>
-        Changes are set on selection.
-        Press the Save button to save permanently to your config.
+        <!-- I'm not going to fix this now but jesus my eyes. 
+                                                - kout       -->
+        Changes apply on selection.
+        Press the Save button to save changes permanently to your config.
         <br/>
+
         <button id="save">Save</button>
         <button id="close">Close</button>
     </body>
