@@ -32,7 +32,7 @@
                 background: #999;
             }
             .p {
-                display: inline
+                display: inline;
             }
         </style>
     </head>
